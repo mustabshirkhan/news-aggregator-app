@@ -69,7 +69,7 @@ For detailed Docker installation instructions, refer to the official Docker docu
 
 1. Configure the Laravel environment:
     
-    ```cp .env.example .env```
+    ```cd backend && cp .env.example .env```
 2. In this application we have 3 data sources and you need to put your api keys in ./backend/.env/ after previous step.
     - NYT
     - The Guardian
