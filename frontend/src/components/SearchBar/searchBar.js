@@ -1,5 +1,5 @@
 import {MDBCol, MDBInput} from "mdb-react-ui-kit";
-import React, {useState} from "react";
+import React from "react";
 import _debounce from 'lodash/debounce'; // Import debounce from lodash
 const SearchBar = (props) => {
     const {fetchData, searchQuery, setSearchQuery} =  props;

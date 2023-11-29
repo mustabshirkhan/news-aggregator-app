@@ -1,4 +1,4 @@
-import {MDBCol, MDBInput} from "mdb-react-ui-kit";
+import {MDBCol} from "mdb-react-ui-kit";
 import Select from "react-select";
 import React from "react";
 

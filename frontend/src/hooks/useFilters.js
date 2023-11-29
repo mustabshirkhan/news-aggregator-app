@@ -1,9 +1,8 @@
 import {useState} from "react";
-import axios from "axios";
 
 
 const useFilters = (props) => {
-    const {token, http, setNews} = props;
+    const { http, setNews} = props;
     const [authorFilter, setAuthorFilter] = useState([]);
     const [categoryFilter, setCategoryFilter] = useState([]);
     const [publishedDate, setpublishedDate] = useState('');

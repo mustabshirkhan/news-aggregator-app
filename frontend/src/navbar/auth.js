@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Routes, Route, Link, BrowserRouter} from 'react-router-dom';
+import {Routes, Route, Link} from 'react-router-dom';
 import Dashboard from '../components/Dashboard/dashboard';
 import useAuth from '../hooks/useAuth';
 import {useNavigate} from "react-router-dom";
@@ -7,7 +7,7 @@ import NewAggregator from "../components/News/newsAggregator";
 import Preferences from "../components/Preferences/preferences";
 
 function Auth() {
-    const {token, logout, user} = useAuth();
+    const {token, logout} = useAuth();
     const navigate = useNavigate();
     const logoutUser =  () => {
         if (token !== undefined) {
@@ -19,7 +19,7 @@ function Auth() {
         if(!token){
             navigate("/login");
         }
-    }, [token]);
+    }, [token, navigate]);
 
     return (
         <>

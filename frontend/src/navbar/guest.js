@@ -1,5 +1,4 @@
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-import Home from '../components/home';
+import {Routes, Route, Link} from 'react-router-dom';
 import Login from '../components/Auth/login';
 import Register from '../components/Auth/register';
 import NewsAggregator from "../components/News/newsAggregator";

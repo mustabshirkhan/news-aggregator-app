@@ -63,13 +63,26 @@ For detailed Docker installation instructions, refer to the official Docker docu
 
 2. Change into the project directory:
 
-    ```cd news-aggregator```
+    ```cd news-aggregator-app```
 
 ### Configuration
 
 1. Configure the Laravel environment:
     
     ```cp .env.example .env```
+2. In this application we have 3 data sources and you need to put your api keys in ./backend/.env/ after previous step.
+    - NYT
+    - The Guardian
+    - News API
+3. In .env we have following variables which needs to be setup with your api keys
+   - NEWSAPI_API_KEY='API KEY'
+   - NYT_API_KEY='API KEY'
+   - THE_GUARDIAN_API_KEY='API KEY'
+
+4. 
+
+
+   
 
 ### Usage
 
@@ -78,7 +91,7 @@ For detailed Docker installation instructions, refer to the official Docker docu
    ```docker compose up```
 2. Access the application:
    1. Frontend: http://localhost:3000
-   2. Backend: http://localhost:8000
+   2. Backend: http://localhost:9000
  
 
 Explore and enjoy the News Aggregator app!

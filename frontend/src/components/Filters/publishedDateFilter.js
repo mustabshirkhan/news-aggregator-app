@@ -2,7 +2,7 @@ import {MDBCol, MDBInput} from "mdb-react-ui-kit";
 import React from "react";
 
 const PublishedDateFilter = (props) => {
-    const {options, value, onChange} =  props;
+    const {value, onChange} =  props;
 
     return (
         <>

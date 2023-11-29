@@ -4,15 +4,11 @@ import {
     MDBCol,
     MDBCard,
     MDBCardBody,
-    MDBCardTitle,
-    MDBCardText,
     MDBBtn,
     MDBContainer,
-    MDBInput
 } from 'mdb-react-ui-kit';
 import useAuth from '../../hooks/useAuth';
 import usePreference from '../../hooks/usePreferences';
-import auth from "../../navbar/auth";
 import Select from "react-select";
 
 const  Preferences = () => {
@@ -22,7 +18,6 @@ const  Preferences = () => {
     const [categoryPreference, setCategoryPreference] = useState([]);
     const [sourcePreference, setSourcePreference] = useState([]);
 
-    const [isChecked, setIsChecked] =  useState(false);
     const {
         sources,
         categories,

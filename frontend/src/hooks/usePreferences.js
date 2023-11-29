@@ -1,13 +1,10 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import {useState, useEffect, useCallback} from 'react';
 
 const usePreferences = (props) => {
     const {http, token} = props;
     const [authors, setAuthors] = useState([]);
     const [categories, setCategories] = useState([]);
     const [sources, setSources] = useState([]);
-    const [selectedAuthors, setSelectedAuthors] = useState([]);
-    const [selectedCategories, setSelectedCategories] = useState([]);
-    const [selectedSources, setSelectedSources] = useState([]);
     const [userPreferences, setuserPreferences] = useState([]);
     const [successMsg, setSuccessMsg] = useState(null);
 
@@ -60,7 +57,7 @@ const usePreferences = (props) => {
                 setuserPreferences(response.data.preferences)
 
             });
-    });
+    }, [http]);
 
     const handleSave = useCallback((authorPreference,categoryPreference,sourcePreference) => {
         // Perform save logic with the selected options
@@ -79,7 +76,7 @@ const usePreferences = (props) => {
 
         })
 
-    });
+    },[http, setuserPreferences, setSuccessMsg]);
 
 
     return {

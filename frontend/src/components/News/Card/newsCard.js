@@ -1,4 +1,4 @@
-import {MDBCardText, MDBCol, MDBInput} from "mdb-react-ui-kit";
+import {MDBCardText} from "mdb-react-ui-kit";
 import {Card, Col, Row} from "react-bootstrap"; // Import debounce from lodash
 const NewsCard = (props) => {
     const {news} =  props;

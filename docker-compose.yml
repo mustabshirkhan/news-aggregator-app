@@ -3,24 +3,14 @@ services:
   backend:
     build:
       context: ./backend
+      dockerfile: ./backend/Dockerfile
       network: host
     container_name: backend-app
     volumes:
-      - ./backend:/var/www/html
+      - ./backend/:/var/www/html
       - ./backend/database/migrations:/var/www/html/database/migrations
-    environment:
-      - DB_CONNECTION=mysql
-      - DB_HOST=mysql
-      - DB_PORT=3306
-      - DB_DATABASE=newsapp
-      - DB_USERNAME=newsapp_pass
-      - DB_PASSWORD=newsapp_pass
-      - NEWSAPI_API_KEY=34c91ee930214f9dad95c12c003d2146
-      - NYT_API_KEY=EZSu4o5OQIMeJZ2Zr1c0M1OkMcgxLni0
-      - THE_GUARDIAN_API_KEY=a383255a-12dd-48df-bc06-82bff624c565
-
-    #    command: sh -c "php artisan serve --host=0.0.0.0 --port=9000 && php artisan migrate --force"
-    entrypoint: sh -c "sleep 30 && php artisan migrate &&  php artisan passport:install && php artisan import:news && php artisan serve --host=0.0.0.0 --port=9000"
+#    command: sh -c "php artisan serve --host=0.0.0.0 --port=9000 && php artisan migrate --force"
+    entrypoint: sh -c "composer install && sleep 30 && php artisan migrate &&  php artisan passport:install && php artisan import:news && php artisan serve --host=0.0.0.0 --port=9000"
 
     ports:
       - 9000:9000
@@ -30,10 +20,11 @@ services:
   frontend:
     build:
       context: ./frontend
+      dockerfile: ./frontend/Dockerfile
       network: host
     container_name: frontend-app
     volumes:
-      - ./frontend:/app
+      - ./frontend/src:/app/src
     ports:
       - 3000:3000
 

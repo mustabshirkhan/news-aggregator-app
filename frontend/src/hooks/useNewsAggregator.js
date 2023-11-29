@@ -14,9 +14,6 @@ const useNewsAggregator = (props) => {
     })
 
 
-    useEffect(() => {
-        fetchData(); // Initial fetch without debouncing
-    }, [token, userPreferences]);
 
     const fetchData = async () => {
         try {
@@ -38,6 +35,9 @@ const useNewsAggregator = (props) => {
         }
     };
 
+    useEffect(() => {
+        fetchData(); // Initial fetch without debouncing
+    }, [token, fetchData]);
 
     const fetchNews = async (params) => {
         try {
