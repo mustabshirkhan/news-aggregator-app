@@ -88,7 +88,9 @@ For detailed Docker installation instructions, refer to the official Docker docu
 
 1. Start the Docker containers:
 
-   ```docker compose up```
+   1. ```cd backend && docker compose up```
+   2. ``` cd frontend && docker compose up```
+
 2. Access the application:
    1. Frontend: http://localhost:3000
    2. Backend: http://localhost:9000
