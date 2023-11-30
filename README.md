@@ -59,7 +59,7 @@ For detailed Docker installation instructions, refer to the official Docker docu
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/news-aggregator.git
+   git clone https://github.com/mustabshirkhan/news-aggregator-app.git
 
 2. Change into the project directory:
 
