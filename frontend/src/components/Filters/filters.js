@@ -1,4 +1,4 @@
-import {MDBBtn, MDBCol, MDBInput} from "mdb-react-ui-kit";
+import {MDBBtn, MDBCol} from "mdb-react-ui-kit";
 import React from "react";
 import CategoryFilter from "./categoryFilter";
 import AuthorFilter from "./authorFilter";

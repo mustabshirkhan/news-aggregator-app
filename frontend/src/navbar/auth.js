@@ -33,7 +33,7 @@ function Auth() {
                 </ul>
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                        <a className="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             My Account
                         </a>

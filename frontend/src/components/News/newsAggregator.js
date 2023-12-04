@@ -1,6 +1,5 @@
-import React, {useState, useEffect, useMemo} from 'react';
-import axios from 'axios';
-import {Container, Row, Col, Card} from 'react-bootstrap';
+import React, {useEffect} from 'react';
+import {Container} from 'react-bootstrap';
 
 import Filters from "../Filters/filters";
 import {
@@ -9,7 +8,6 @@ import {
     MDBCol
 } from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Select from 'react-select';
 import usePreferences from "../../hooks/usePreferences";
 import useAuth from "../../hooks/useAuth";
 import useFilters from "../../hooks/useFilters";
@@ -31,16 +29,12 @@ const NewsAggregator = () => {
 
     const {
         authorFilter,categoryFilter,publishedDate,
-        setCategoryFilter,setAuthorFilter,setpublishedDate,
+        setCategoryFilter,setAuthorFilter,
         handleCategoryFilterChange,handlePublishedDateChange,handleAuthorFilterChange,
         handleFilterButton:handleFilter
     } =  useFilters({
         token, http, setNews
     })
-
-    const [cancelToken, setCancelToken] = useState(null);
-
-
 
     useEffect(() => {
         if (token && userPreferences) {
@@ -58,7 +52,7 @@ const NewsAggregator = () => {
             })) || []);
 
         }
-    }, [token, userPreferences]);
+    }, [token, userPreferences, setAuthorFilter, setCategoryFilter]);
 
     return (
         <div>

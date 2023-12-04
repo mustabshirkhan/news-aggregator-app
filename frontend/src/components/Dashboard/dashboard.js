@@ -5,15 +5,16 @@ import useAuth from '../../hooks/useAuth';
     const {http} = useAuth();
     const [userdetail,setUserdetail] = useState('');
 
-    useEffect(()=>{
-        fetchUserDetail();
-    },[]);
-
     const fetchUserDetail = () =>{
         http.get('/me').then((res)=>{
             setUserdetail(res.data);
         });
     }
+
+
+    useEffect(()=>{
+        fetchUserDetail();
+    },[]);
 
     function renderElement(){
         if(userdetail){

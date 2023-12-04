@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {useCallback, useState} from 'react';
-import { useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const useAuth = () => {
     const navigate = useNavigate();
@@ -12,7 +12,6 @@ const useAuth = () => {
     }
 
     const getUser = () =>{
-        const userString = sessionStorage.getItem('user');
         const user_detail = null;
         return user_detail;
     }
@@ -20,7 +19,7 @@ const useAuth = () => {
 
 
     const [token,setToken] = useState(getToken());
-    const [user,setUser] = useState(getUser());
+    const [user] = useState(getUser());
     const [error, setError] = useState(null);
     const [successMsg, setSuccessMsg] = useState(null);
 

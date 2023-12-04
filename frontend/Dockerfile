@@ -2,6 +2,7 @@ FROM node:latest
 
 WORKDIR /app
 
+CMD touch .env
 # Install application dependencies
 COPY package*.json ./
 RUN npm install
