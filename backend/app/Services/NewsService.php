@@ -126,8 +126,8 @@ class NewsService
             $query->whereDate('published_at', $publishedDate);
         }
 
-        if ($category) {
-            $query->whereIn('category', explode(",",$category));
+        if ($source) {
+            $query->whereIn('source', explode(",",$source));
         }
 
         // Apply search

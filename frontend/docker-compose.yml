@@ -1,13 +1,27 @@
+# version: '3'
+# services:
+#     frontend:
+#         build:
+#             context: .
+#             dockerfile: Dockerfile
+#             network: host
+#         container_name: frontend-app
+#         volumes:
+#             - ./:/app
+#         ports:
+#             - 3000:3000
+
 version: '3'
 services:
-    frontend:
-        build:
-            context: .
-            dockerfile: Dockerfile
-            network: host
-        container_name: frontend-app
-        volumes:
-            - ./:/app
-        ports:
-            - 3000:3000
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host      
+    container_name: frontend-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./.env:/app/.env
 

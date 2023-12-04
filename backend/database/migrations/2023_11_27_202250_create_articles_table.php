@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('url')->unique();
             $table->dateTime('published_at');
-            $table->string('image_url')->nullable();
+            $table->text('image_url')->nullable();
             $table->string('category')->nullable();
             $table->timestamps();
         });

@@ -45,7 +45,7 @@ class TheGuardianAdapter implements NewsAdapter
                 'description' => $data->fields->trailText,
                 'url' => $data->webUrl,
                 'published_at' => Carbon::parse($data->webPublicationDate),
-                'image_url' => $data->fields->thumbnail,
+                'image_url' => isset($data->fields->thumbnail) ? $data->fields->thumbnail : null,
                 'category' => $data->sectionName,
             ];
         });

@@ -6,13 +6,7 @@ import Filters from "../Filters/filters";
 import {
     MDBContainer,
     MDBRow,
-    MDBCol,
-    MDBCard,
-    MDBCardBody,
-    MDBCardTitle,
-    MDBCardText,
-    MDBBtn,
-    MDBInput
+    MDBCol
 } from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Select from 'react-select';
@@ -27,16 +21,11 @@ const NewsAggregator = () => {
     const {
         authors,
         categories,
-        sources,
-        fetchuserPreferences,
         userPreferences
     } = usePreferences({http, token});
     const {
         news,
         setNews,
-        fetchNews,
-        fetchNewsWithPreferences,
-        fetchData,
         searchBarComponent
     } = useNewsAggregator({token,http,userPreferences})
 
