@@ -9,11 +9,10 @@ use Illuminate\Support\Facades\Log;
 
 class NewsRepository implements NewsRepositoryInterface
 {
-    public function __construct(private NYTAdapter $nytAdapter)
+    public function __construct()
     {
     }
-//    public function getAllNews(string $keyword,array $filters): array;
-//    public function getSources(): array;
+
     public function importNews(Collection $articles)
     {
 
@@ -24,7 +23,6 @@ class NewsRepository implements NewsRepositoryInterface
         }
     }
 
-//    public function getAuthors(): array;
     public function fetchNews()
     {
         // TODO: Implement fetchNews() method.
